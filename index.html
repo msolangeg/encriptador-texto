@@ -8,7 +8,9 @@
   </head>
   <body>
     <header>
-      <img src="./assets/Logo.svg" alt="logo alura" />
+      <a class="achor_logo" href="./index.html">
+        <img src="./assets/Logo.svg" alt="logo alura" />
+      </a>
       <h1>ENCRIPTADOR DE TEXTO</h1>
       <nav class="button-externo-container">
         <a
@@ -36,9 +38,9 @@
             id="textOriginal"
           ></textarea>
           <div class="advertensing">
-            <img src="./assets/icon.svg" alt="icon de atención">
+            <img src="./assets/icon.svg" alt="icon de atención" />
             <span>Solo letras minúsculas y sin acentos.</span>
-          </div>          
+          </div>
           <div class="button_container">
             <button
               id="valorText"
@@ -65,12 +67,17 @@
               <p>Ingrese el texto que quiera encriptar o desencriptar.</p>
             </div>
             <div class="output_text" id="output_text">
-              <textarea class="textOutput" type="text" id="textOutput"></textarea>
+              <textarea
+                class="textOutput"
+                type="text"
+                id="textOutput"
+              ></textarea>
               <button class="button-style-copy" id="textCopy">Copiar</button>
+              <!-- //alerta con estilo -->
+              <div id="alert-container">
+                <p id="alert-message"></p>
                 <!-- //alerta con estilo -->
-                <div id="alert-container">   
-                <p id="alert-message"></p> 
-                <!-- //alerta con estilo -->
+              </div>
             </div>
           </div>
         </div>
@@ -90,5 +97,5 @@
     </footer>
   </body>
 
-  <script src="app.js"> </script>
+  <script src="app.js"></script>
 </html>
