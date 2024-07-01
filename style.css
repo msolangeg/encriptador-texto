@@ -30,6 +30,7 @@ header{
     background-color: var(--blur-background-nav);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     backdrop-filter: blur(5px);
+    width: 100vw;
 }
 
 h1{
@@ -88,6 +89,7 @@ body{
     align-items: center;
     gap: 2rem;
     padding: 2rem;
+    
 }
 
 .textInput{
@@ -112,6 +114,11 @@ textarea:focus {
     outline-width: 2px; 
     outline-style: solid; 
   }
+.advertensing{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
 
 span{
     font-size: 0.8rem;
@@ -198,6 +205,7 @@ h2{
 
 .image_astro2{
     height: 31rem;
+    object-fit: contain;
 }
 
 .output_text{
@@ -219,11 +227,14 @@ h2{
     opacity: 0.9;
 }
 /* -------------------------------------------FOOTER---- */
+footer{
+    height: auto;
+}
+
 .footer_container{
     color: var(--disable-color);
     text-align: center;
     padding: 1rem;
-    height: 5vh;
     margin-top: 3rem;
 }
 
@@ -267,3 +278,118 @@ h2{
     background-color: var(--tertiary-color);
     border: 2px solid var(red); 
   }
+
+  /* ------------------RESPONSIVE -------------------------  */
+
+@media screen and (max-width: 1448px) {
+    .principal_container{
+        flex-direction: column;
+    }
+
+    .input_text_container{
+        width: 100%;
+        height: 60%;
+        gap:8px;
+
+    }
+
+    .message_render_container{
+        width: 100%;
+        height: auto;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    footer{
+        width: 100vw;
+
+    } 
+    .image_astro2{
+        display: none;
+    }
+    
+};
+
+/* --------------------------TABLET--------- */
+@media screen and (max-width: 1024px) {
+   
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 1.0rem;
+    }
+
+    footer{
+        width: 100vw;
+
+    }
+}
+
+/* --------------------------CELULARES--------- */
+
+@media screen and (max-width: 600px) {
+
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body{
+        width: 90%;
+    }
+
+    .input_text_container{
+        height: 70%;
+    }
+
+    .message_render_container{
+        height: auto;
+    }
+
+    .image_astro2{
+        display: none;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+
+    .button-externo-container{
+        display: none;
+    }
+
+    .button_container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer{
+        width: 100vw;
+    }
+
+    .footer_container{
+        margin-top: auto;
+    }
+};
+
+
