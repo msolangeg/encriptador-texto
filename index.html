@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador de texto</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/Logo.svg" alt="logo alura" />
+      <h1>ENCRIPTADOR DE TEXTO</h1>
+      <nav class="button-externo-container">
+        <a
+          class="button_externo"
+          href="https://portfolio-msg.vercel.app/"
+          target="”_blank”"
+        >
+          Portfolio</a
+        >
+        <a
+          class="button_externo"
+          href="https://www.linkedin.com/in/marina-solange-garcia/"
+          target="”_blank”"
+        >
+          Linkdin</a
+        >
+      </nav>
+    </header>
+    <main>
+      <div class="principal_container">
+        <div class="input_text_container">
+          <textarea
+            class="textInput"
+            placeholder="Ingrese el texto aquí..."
+            id="textOriginal"
+          ></textarea>
+          <span>Solo letras minúsculas y sin acentos.</span>
+          <div class="button_container">
+            <button
+              id="valorText"
+              class="button-style one"
+              onClick="encriptar()"
+            >
+              Encripar
+            </button>
+            <button class="button-style two" onClick="desencriptarTexto()">
+              Desencripar
+            </button>
+          </div>
+        </div>
+        <div class="message_render_container">
+          <img
+            class="image_astro2"
+            src="./assets/astro2.png"
+            alt="astronauta con marciano"
+            id="image_astro"
+          />
+          <div class="text_container">
+            <div id="empty_message">
+              <h2>Ningún mensaje fue encontrado</h2>
+              <p>Ingrese el texto que quiera encriptar o desencriptar.</p>
+            </div>
+            <div class="output_text" id="output_text">
+              <textarea class="textOutput" type="text" id="textOutput"></textarea>
+              <button class="button-style-copy" id="textCopy">Copiar</button>
+                <!-- //alerta con estilo -->
+                <div id="alert-container">   
+                <p id="alert-message"></p> 
+                <!-- //alerta con estilo -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer_container">
+      <!-- <img class="astronauta" src="./assets/astro3.png" alt="astronauta con galaxia"> -->
+      <span
+        >Sitio realizado por MSG para
+        <a
+          href="https://app.aluracursos.com/form-one/registro/latam-general"
+          class="button_alura"
+          target="”_blank”"
+          >Alura Latam</a
+        ></span
+      >
+    </footer>
+  </body>
+
+  <script src="app.js"> </script>
+</html>
