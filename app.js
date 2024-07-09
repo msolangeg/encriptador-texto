@@ -63,7 +63,7 @@ function desencriptar(textoEncriptado) {
     
     document.getElementById('image_astro').style.display = 'none'
     document.getElementById('empty_message').style.display = 'none'
-  
+    document.getElementById('output_text').style.display = ''
 
 let i = 0;
 while (i < textoEncriptado.length) {

@@ -101,7 +101,7 @@ main{
     height: 80%;
     border-radius: 24px;
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color:var(--secondary-color);
     border: none;
     background-color: var(--tertiary-color);
@@ -288,8 +288,14 @@ footer{
   }
 
   /* ------------------RESPONSIVE -------------------------  */
-
-@media screen and (max-width: 1448px) {
+    /* ----------------------------TABLET--------- */
+    @media screen and (max-width: 1024px) {
+            
+    body{
+        height: 100vh;    
+        display: flex;
+        flex-direction: column;
+            }
 
     main{
         padding: 2% 5%
@@ -314,7 +320,16 @@ footer{
 
     .message_render_container{
         width: auto;
-        height: auto;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .textOutput{
+        height: 20%;
+    }
+    .output_text{
+        gap: 8px;
     }
 
     h1{
@@ -324,36 +339,13 @@ footer{
     .image_astro2{
         display: none;
     }
-    
-};
 
-/* --------------------------TABLET--------- */
-@media (min-width: 716px) and (max-width: 1024px) {
-   
-    body{
-        height: 100vh;    
-        display: flex;
-        flex-direction: column;
-    }
-
-    header{
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: column;
-    }
-
-    h1{
-        font-size: 1.0rem;
-    }
 }
 
 /* --------------------------CELULARES--------- */
 
 @media screen and (max-width:715px) {
+    
 
     header{
         display: flex;
@@ -366,8 +358,14 @@ footer{
     }
 
     .message_render_container{
-        height: auto;
+        height: 20%;
     }
+
+
+    .button-style-copy{
+        width: 100%;
+        padding: 12px 48px 12px 48px;
+    }  
 
     .image_astro2{
         display: none;
