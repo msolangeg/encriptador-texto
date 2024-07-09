@@ -139,3 +139,14 @@ copyButton.addEventListener('click', () => {
       });
   }
 });
+
+// _________________________modal
+
+const btnCerrarModal = document.getElementById('btnCerrarModal');
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+
+btnCerrarModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+  overlay.style.display = 'none';
+});
