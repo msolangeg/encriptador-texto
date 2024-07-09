@@ -6,6 +6,7 @@ function limpiarCaja() {
 // ----------------------------------------------Esconder boton y textarea-----
  document.getElementById('output_text').style.display = 'none'
 
+
 // -----------------------------------------funcion encriptar------------------
 
 function encriptar() {
@@ -140,7 +141,17 @@ copyButton.addEventListener('click', () => {
   }
 });
 
-// _________________________modal
+ //------------------------------------button sonido
+
+function playSound() {
+  document.getElementById('myClickSound').play();
+}
+ function encriptarSound() {
+  encriptar();
+  playSound();
+ }
+ 
+// ------------------------------modal
 
 const btnCerrarModal = document.getElementById('btnCerrarModal');
 const modal = document.querySelector('.modal');

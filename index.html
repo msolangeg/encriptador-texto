@@ -60,11 +60,12 @@
             <button
               id="valorText"
               class="button-style one"
-              onClick="encriptar()"
+              onClick="encriptarSound()"
             >
               Encriptar
             </button>
-            <button class="button-style two" onClick="desencriptarTexto()">
+            <button 
+            class="button-style two" onClick="desencriptarTexto()">
               Desencriptar
             </button>
           </div>
@@ -97,9 +98,11 @@
           </div>
         </div>
       </div>
+      <audio
+              id="myCLickSound"
+              src="./messageClick.mp3"></audio>
     </main>
     <footer class="footer_container">
-      <!-- <img class="astronauta" src="./assets/astro3.png" alt="astronauta con galaxia"> -->
       <span
         >Sitio realizado por MSG para
         <a
