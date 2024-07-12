@@ -109,6 +109,7 @@ const textoEncriptado = document.getElementById('textOriginal').value;
 const textoDesencriptado = desencriptar(textoEncriptado);
 
 document.getElementById('textOutput').textContent = textoDesencriptado;
+limpiarCaja();
 }
 
 // ---------------------------------------button copy------
