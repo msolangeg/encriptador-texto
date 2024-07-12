@@ -30,7 +30,7 @@ header{
     background-color: var(--blur-background-nav);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     backdrop-filter: blur(5px);
-    width: 100vw;
+    width: 100%;
 }
 
 h1{
@@ -64,8 +64,12 @@ body{
     background-image: url(./assets/star_background.png);
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
     width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main{
@@ -233,16 +237,16 @@ h2{
 /* -------------------------------------------FOOTER---- */
 footer{
     height: auto;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     margin-top: 1rem;
 }
 
 .footer_container{
     color: var(--disable-color);
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
 }
 
 .button_alura{
@@ -348,16 +352,49 @@ footer{
 
     header{
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
+    }
+
+    header h1{
+        font-size: 1.0rem;
+    }
+
+    header img{
+        height: 1.5rem;
+    }
+
+
+
+    .main{
+        height: fit-content;
+    }
+
+    .principal_container{
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        width: auto;
     }
 
     .input_text_container{
         height: 70%;
     }
 
+    .textInput{
+        height: 150px;
+    }
+    
+
+    .textOutput{
+        height: 150px;
+    }
+
+    .footer{
+        display: block;
+    }
+
     .message_render_container{
-        height: 20%;
+        height: auto;
     }
 
 
