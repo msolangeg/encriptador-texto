@@ -49,7 +49,7 @@ function encriptar() {
                        .replace(/[íìïî]/g, 'i')
                        .replace(/[óòöôõ]/g, 'o')
                        .replace(/[úùüû]/g, 'u')
-                      //  .replace(/[^a-z0-9\s]/g, ''); 
+                       .replace(/[^a-z0-9\s]/g, ''); 
 
       document.getElementById('textOutput').textContent = textModify;
       limpiarCaja();

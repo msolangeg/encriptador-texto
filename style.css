@@ -222,6 +222,7 @@ h2{
     gap: 2rem;
     box-sizing: border-box;
     text-align: left;
+    
 }
 
 .textOutput{
@@ -233,6 +234,7 @@ h2{
     border: none;
     background-color: var(--tertiary-color);
     opacity: 0.9;
+    resize: none;
 }
 /* -------------------------------------------FOOTER---- */
 footer{
