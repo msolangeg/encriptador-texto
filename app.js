@@ -1,24 +1,23 @@
 
-// --------------------------------------Limpiar caja-------------------------
+// --------------------------------------Clear caja-------------------------
 function limpiarCaja() {
     document.getElementById('textOriginal').value = '';
 }
-// ----------------------------------------------Esconder boton y textarea-----
+// ----------------------------------------------Esconder botón y textarea-----
  document.getElementById('output_text').style.display = 'none'
 
 
-// -----------------------------------------funcion encriptar------------------
+// -----------------------------------------función encriptar------------------
 
 function encriptar() {
    
     const textCapture = document.getElementById('textOriginal').value;
     let textModify = "";
-
     
     if (textCapture) {
-        document.getElementById('image_astro').style.display = 'none'
-        document.getElementById('empty_message').style.display = 'none'
-        document.getElementById('output_text').style.display = ''
+        document.getElementById('image_astro').style.display = 'none';
+        document.getElementById('empty_message').style.display = 'none';
+        document.getElementById('output_text').style.display = '';
 
       for (let i = 0; i < textCapture.length; i++) {
         const letra = textCapture[i].toLowerCase();
@@ -44,12 +43,20 @@ function encriptar() {
            
         }
       }
+      // document.getElementById('textOutput').textContent = textModify;
+      textModify = textModify.replace(/[áàäâã]/g, 'a')
+                       .replace(/[éèëê]/g, 'e')
+                       .replace(/[íìïî]/g, 'i')
+                       .replace(/[óòöôõ]/g, 'o')
+                       .replace(/[úùüû]/g, 'u')
+                      //  .replace(/[^a-z0-9\s]/g, ''); 
+
       document.getElementById('textOutput').textContent = textModify;
       limpiarCaja();
     }    
 }
 
-// --------------------------------------funcion desencriptar------------------
+// --------------------------------------función desencriptar-------
 
 function desencriptar(textoEncriptado) {
       const reglasDes = {
@@ -62,9 +69,9 @@ function desencriptar(textoEncriptado) {
 
     let textoDesencriptado = "";
     
-    document.getElementById('image_astro').style.display = 'none'
-    document.getElementById('empty_message').style.display = 'none'
-    document.getElementById('output_text').style.display = ''
+    document.getElementById('image_astro').style.display = 'none';
+    document.getElementById('empty_message').style.display = 'none';
+    document.getElementById('output_text').style.display = '';
 
 let i = 0;
 while (i < textoEncriptado.length) {
@@ -103,7 +110,8 @@ const textoDesencriptado = desencriptar(textoEncriptado);
 
 document.getElementById('textOutput').textContent = textoDesencriptado;
 }
-// --------------------------------copy button----------------------------------
+
+// ---------------------------------------button copy------
 
 const textarea = document.getElementById('textOutput');
 const copyButton = document.getElementById('textCopy');
@@ -126,7 +134,7 @@ function showAlert(message, type = 'success') {
     alertContainer.style.display = 'none';
   }
 
-//copia boton
+//----------------------------------button "Copiar"----
 copyButton.addEventListener('click', () => {
   const textToCopy = textarea.value;
 
@@ -141,7 +149,7 @@ copyButton.addEventListener('click', () => {
   }
 });
 
- //------------------------------------button sonido
+ //------------------------------------button sound
 
 function playSound() {
   document.getElementById('myClickSound').play();
@@ -151,7 +159,7 @@ function playSound() {
   playSound();
  }
  
-// ------------------------------modal
+// -------------------------------------------modal
 
 const btnCerrarModal = document.getElementById('btnCerrarModal');
 const modal = document.querySelector('.modal');
